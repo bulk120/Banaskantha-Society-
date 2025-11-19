@@ -1,0 +1,226 @@
+:root {
+    --accent: #0b6df0;
+    --muted: #6b7280;
+    --bg: #f7f9fc;
+    --card: #ffffff
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial;
+    margin: 0;
+    background: var(--bg);
+    color: #0f172a
+}
+
+.container {
+    max-width: 1100px;
+    margin: 28px auto;
+    padding: 20px
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px
+}
+
+.logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--accent), #06b6d4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700
+}
+
+nav a {
+    margin-left: 18px;
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 600
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 28px;
+    margin-top: 28px;
+    align-items: center
+}
+
+.card {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 6px 20px rgba(12, 15, 20, 0.06)
+}
+
+h1 {
+    margin: 0 0 10px;
+    font-size: 28px
+}
+
+p.lead {
+    color: var(--muted);
+    margin: 0 0 16px
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 18px
+}
+
+.service {
+    padding: 14px;
+    border-radius: 12px;
+    background: linear-gradient(180deg, rgba(11, 109, 240, 0.06), transparent);
+    text-align: center
+}
+
+.cta {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px
+}
+
+.btn {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 0;
+    font-weight: 700;
+    cursor: pointer
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #fff
+}
+
+.btn-ghost {
+    background: transparent;
+    border: 2px solid rgba(11, 109, 240, 0.12);
+    color: var(--accent)
+}
+
+.contacts {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 14px
+}
+
+aside img {
+    width: 100%;
+    border-radius: 12px;
+    display: block
+}
+
+section.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 22px
+}
+
+.values {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.value {
+    background: linear-gradient(90deg, rgba(6, 182, 212, 0.06), transparent);
+    padding: 12px;
+    border-radius: 10px
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 18px
+}
+
+.gallery img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px
+}
+
+footer {
+    margin-top: 28px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+    padding: 18px
+}
+
+@media (max-width:900px) {
+    .hero {
+        grid-template-columns: 1fr
+    }
+
+    .services {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .about {
+        grid-template-columns: 1fr
+    }
+}
+
+@media (max-width:520px) {
+    .services {
+        grid-template-columns: 1fr
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    nav a {
+        display: none
+    }
+
+    .logo {
+        width: 52px;
+        height: 52px
+    }
+}
+
+.whatsapp-fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: transform .2s
+}
+
+.whatsapp-fab:hover {
+    transform: scale(1.1)
+}
